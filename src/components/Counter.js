@@ -7,11 +7,15 @@ export default function Counter() {
   const handleDecrease = () => {
     setCount(count - 1);
   };
+  const handleZero = () => {
+    setCount(0);
+  };
   return (
     <div>
       <h1>Count: {count}</h1>
       <button onClick={handleIncrease}>Increase</button>
       <button onClick={handleDecrease}>Decrease</button>
+      <button onClick={handleZero}>Set To Zero</button>
     </div>
   );
 }
