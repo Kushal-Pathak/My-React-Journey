@@ -17,7 +17,7 @@ export default function PredictAge() {
   return (
     <div>
       <h1>Exercise 2</h1>
-      <h1>Predict your age!</h1>
+      <h2>Predict your age!</h2>
       <input onChange={handleChange} type="text" placeholder="eg: Tesla"></input>
       <button onClick={predictAge}>Predict Age</button>
       <h3>Name: {age.name}</h3>
