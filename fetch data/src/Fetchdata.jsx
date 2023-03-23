@@ -17,7 +17,7 @@ function Fetchdata() {
   }, []);
 
   return (
-    <div className="App">
+    <div>
       <h1>Exercise 1</h1>
       <button onClick={fetchfact}>Generate Cat Fact</button>
       <p>{fact}</p>
