@@ -1,14 +1,29 @@
-import { useState } from 'react'
-import { useToggle } from './useToggle';
+import "./App.css";
+import Cat from "./Cat";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Toggler from "./Toggler";
+import Counter from "./Counter";
 
 function App() {
-  const [isVisible, toggle] = useToggle()
+  const client = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false,
+      },
+    },
+  });
+  
   return (
-    <div className="App">
-      <button onClick={toggle}>Show</button>
-      {isVisible&&<h1>Hello World!</h1>}
-    </div>
-  )
+    <QueryClientProvider client={client}>
+      <div className="App">
+        <Toggler />
+        <hr />
+        <Cat />
+        <hr/>
+        <Counter/>
+      </div>
+    </QueryClientProvider>
+  );
 }
 
-export default App
+export default App;
