@@ -1,14 +1,11 @@
-import { useState } from "react";
-//import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
 import { Main } from "./pages/Main";
 import { Login } from "./pages/Login";
 import { Navbar } from "./components/Navbar";
 import { CreatePost } from "./pages/create-post/CreatePost";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
       <Router>
